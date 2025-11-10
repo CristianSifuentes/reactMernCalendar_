@@ -1,5 +1,5 @@
 
-export const getMessagesES = () => {
+export const getMessagesEN = () => {
     return {
         allDay: 'All day',
         previous: '<',

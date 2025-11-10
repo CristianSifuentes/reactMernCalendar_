@@ -32,7 +32,7 @@ export const LoginPage = () => {
                 </div>
 
                 <div className="col-md-6 login-form-2">
-                    <h3>Registro</h3>
+                    <h3>Register</h3>
                     <form>
                         <div className="form-group mb-2">
                             <input
