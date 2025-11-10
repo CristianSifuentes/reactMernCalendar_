@@ -9,11 +9,11 @@ import Modal from 'react-modal';
 import DatePicker, { registerLocale } from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
-import es from 'date-fns/locale/es';
+import enUS from 'date-fns/locale/en-US';
 import { useCalendarStore, useUiStore } from '../../hooks';
 
 
-registerLocale( 'es', es );
+registerLocale( 'enUS', enUS );
 
 
 const customStyles = {
@@ -86,7 +86,7 @@ export const CalendarModal = () => {
         const difference = differenceInSeconds( formValues.end, formValues.start );
         
         if ( isNaN( difference ) || difference <= 0 ) {
-            Swal.fire('Fechas incorrectas','Revisar las fechas ingresadas','error');
+            Swal.fire('Incorrect dates','Check the entered dates','error');
             return;
         }
         
@@ -111,12 +111,12 @@ export const CalendarModal = () => {
         overlayClassName="modal-fondo"
         closeTimeoutMS={ 200 }
     >
-        <h1> Nuevo evento </h1>
+        <h1> New event </h1>
         <hr />
         <form className="container" onSubmit={ onSubmit }>
 
             <div className="form-group mb-2">
-                <label>Fecha y hora inicio</label>
+                <label>Start date and time</label>
                 <DatePicker 
                     selected={ formValues.start }
                     onChange={ (event) => onDateChanged(event, 'start') }
@@ -129,7 +129,7 @@ export const CalendarModal = () => {
             </div>
 
             <div className="form-group mb-2">
-                <label>Fecha y hora fin</label>
+                <label>End date and time</label>
                 <DatePicker 
                     minDate={ formValues.start }
                     selected={ formValues.end }
@@ -144,30 +144,30 @@ export const CalendarModal = () => {
 
             <hr />
             <div className="form-group mb-2">
-                <label>Titulo y notas</label>
+                <label>Title and notes</label>
                 <input 
                     type="text" 
                     className={ `form-control ${ titleClass }`}
-                    placeholder="Título del evento"
+                    placeholder="Event title"
                     name="title"
                     autoComplete="off"
                     value={ formValues.title }
                     onChange={ onInputChanged }
                 />
-                <small id="emailHelp" className="form-text text-muted">Una descripción corta</small>
+                <small id="emailHelp" className="form-text text-muted">A short description</small>
             </div>
 
             <div className="form-group mb-2">
                 <textarea 
                     type="text" 
                     className="form-control"
-                    placeholder="Notas"
+                    placeholder="Notes"
                     rows="5"
                     name="notes"
                     value={ formValues.notes }
                     onChange={ onInputChanged }
                 ></textarea>
-                <small id="emailHelp" className="form-text text-muted">Información adicional</small>
+                <small id="emailHelp" className="form-text text-muted">Additional information</small>
             </div>
 
             <button
@@ -175,7 +175,7 @@ export const CalendarModal = () => {
                 className="btn btn-outline-primary btn-block"
             >
                 <i className="far fa-save"></i>
-                <span> Guardar</span>
+                <span> Save</span>
             </button>
 
         </form>

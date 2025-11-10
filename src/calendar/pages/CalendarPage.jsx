@@ -52,7 +52,7 @@ export const CalendarPage = () => {
       <Navbar />
 
       <Calendar
-        culture='es'
+        culture='enUS'
         localizer={ localizer }
         events={ events }
         defaultView={ lastView }

@@ -6,12 +6,12 @@ export const Navbar = () => {
         <span className="navbar-brand">
             <i className="fas fa-calendar-alt"></i>
             &nbsp;
-            Fernando
+            Cristian
         </span>
 
         <button className="btn btn-outline-danger">
             <i className="fas fa-sign-out-alt"></i>
-            <span>Salir</span>
+            <span>Logout</span>
         </button>
     </div>
   )

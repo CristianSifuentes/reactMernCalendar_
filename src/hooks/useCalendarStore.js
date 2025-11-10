@@ -12,33 +12,32 @@ export const useCalendarStore = () => {
     }
 
     const startSavingEvent = async( calendarEvent ) => {
-        // TODO: llegar al backend
+        // TODO: Reaching the backend
 
-        // Todo bien
+        // All good
         if( calendarEvent._id ) {
-            // Actualizando
+            // Updating
             dispatch( onUpdateEvent({ ...calendarEvent }) );
         } else {
-            // Creando
+            // Creating
             dispatch( onAddNewEvent({ ...calendarEvent, _id: new Date().getTime() }) );
         }
     }
 
     const startDeletingEvent = () => {
-        // Todo: Llegar al backend
-
+        // TODO: Reaching the backend
 
         dispatch( onDeleteEvent() );
     }
 
 
     return {
-        //* Propiedades
+        //* Properties
         activeEvent,
         events,
         hasEventSelected: !!activeEvent,
 
-        //* Métodos
+        //* Methods
         startDeletingEvent,
         setActiveEvent,
         startSavingEvent,
