@@ -1,4 +1,12 @@
 import { useState } from 'react';
+// Big Calendar
+// React Big Calendar
+/// react big calendar is a powerful and customizable calendar component 
+// for React applications. It provides a variety of views (month, week, day, agenda)
+// and supports drag-and-drop functionality, event resizing, and more. 
+// It is built on top of the popular date-fns library for date manipulation and formatting.
+// It is widely used in applications that require scheduling and calendar functionalities.
+// It is known for its flexibility and ease of integration with React applications.
 import { Calendar } from 'react-big-calendar';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 
@@ -50,7 +58,10 @@ export const CalendarPage = () => {
   return (
     <>
       <Navbar />
-
+      // Calendar Component from react-big-calendar
+      // It displays a calendar interface where users can view and interact with events.
+      // It supports various views (month, week, day) and allows for event selection and double-click actions.
+      // It is highly customizable through props and integrates with the application's state management.
       <Calendar
         culture='enUS'
         localizer={ localizer }
